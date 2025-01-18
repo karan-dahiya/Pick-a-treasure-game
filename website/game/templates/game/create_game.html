@@ -1,0 +1,68 @@
+<!--&lt;!&ndash;&lt;!&ndash; create_game.html &ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html>&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Create Game</title>&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h2>Game Board:</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;    <pre>{{ board }}</pre>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <h3>Player One ({{ player_one.name }}): {{ player_one.score }} points</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <h3>Player Two ({{ player_two.name }}): {{ player_two.score }} points</h3>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <h4>{{ message }}</h4>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <h3>Pick a Treasure (Format: /game/pick/PlayerName/row/col):</h3>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>To pick a treasure, go to the URL below for the corresponding player:</p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li><a href="{% url 'pick_treasure' player_name='One' row=0 col=0 %}">Player One picks row 0, col 0</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li><a href="{% url 'pick_treasure' player_name='One' row=1 col=1 %}">Player One picks row 1, col 1</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;        <li><a href="{% url 'pick_treasure' player_name='Two' row=0 col=0 %}">Player Two picks row 0, col 0</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; Add more links for testing &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+<!--&lt;!&ndash; create_game.html &ndash;&gt;-->
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Create Game</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h2>Game Board:</h2>-->
+<!--    <pre>{{ board }}</pre>-->
+
+<!--    <h3>Player One ({{ player_one.name }}): {{ player_one.score }} points</h3>-->
+<!--    <h3>Player Two ({{ player_two.name }}): {{ player_two.score }} points</h3>-->
+
+<!--    <h4>{{ message }}</h4>-->
+
+<!--    <h3>Pick a Treasure (Format: /game/pick/PlayerName/row/col):</h3>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!-- create_game.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Game</title>
+</head>
+<body>
+    <h2>Karan's Gameboard</h2>
+    <pre>{{ board }}</pre>
+
+    <h3>Player Scores:</h3>
+    <p>Player One: {{ player_one.score }}</p>
+    <p>Player Two: {{ player_two.score }}</p>
+    <br>
+    <h3>Pick a Treasure (Format: /game/game/pick/PlayerName/row/col):</h3>
+    <p><a href="{% url 'game_board' %}">Refresh Game Board</a></p>
+</body>
+</html>
